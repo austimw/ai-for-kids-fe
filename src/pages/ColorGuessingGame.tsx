@@ -61,7 +61,7 @@ export default function ColorGuessingGame() {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center w-full"
+      className="h-full flex items-center justify-center w-full"
       style={{ backgroundColor: "#FFD72E" }}
     >
       <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4">
