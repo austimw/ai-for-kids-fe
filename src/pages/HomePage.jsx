@@ -9,6 +9,8 @@ export default function HomePage() {
   };
   return (
     <div className="w-full h-full bg-yellow-300 p-6 flex flex-col">
+        <img src="src/assets/general/badge.svg" alt="" className="absolute w-[54.65px] h-[62.95px] z-10 top-[69px] left-[809px]"/>
+        <img src="src/assets/general/white-bg.svg" alt="" className="absolute w-[54.65px] h-[62.95px] top-[77px] left-[802px]"/>
       <header className="mb-6 mt-20">
         <h2 className="text-xl font-semibold">Hello</h2>
         <h1 className="text-4xl font-bold mb-2">Reev!</h1>
@@ -17,7 +19,7 @@ export default function HomePage() {
         </p>
       </header>
 
-      <div className="space-y-4 flex-grow text-white">
+      <div className="space-y-4 flex-grow text-white max-h-[519px]">
         <div className="bg-purple-300 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]">
           <div className="z-10">
             <button className="bg-red rounded-full py-2 mb-4 mt-2">
@@ -65,7 +67,7 @@ export default function HomePage() {
       <div className="flex justify-center w-full">
         <button
           onClick={handleCreateClick}
-          className="bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[400px] shadow-[0_8px_0_#9d361f]"
+          className="bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[350px] shadow-[0_8px_0_#9d361f]"
         >
           Create Video
           <img
