@@ -56,6 +56,7 @@ import LandingBell from "./icons/landing-bell.svg";
 import Egg1 from "./icons/egg1.svg";
 import Egg2 from "./icons/egg2.svg";
 import Egg3 from "./icons/egg3.svg";
+import FloatingEgg from "./common/FloatingEgg.gif";
 
 export {
   BGYellow,
@@ -113,4 +114,5 @@ export {
   Egg1,
   Egg2,
   Egg3,
+  FloatingEgg,
 };

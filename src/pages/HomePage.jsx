@@ -2,6 +2,7 @@ import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
+import { FloatingEgg } from "../assets";
 
 export default function HomePage() {
   const { data, loading, error, fetchData } = useFetch();
@@ -15,6 +16,10 @@ export default function HomePage() {
   const handleCreateClick = () => {
     navigate("/welcome");
   };
+
+  if (loading) {
+    return <img src={FloatingEgg} alt="Loading" />;
+  }
 
   return (
     <div className="w-full h-full bg-yellow-300 p-6 flex flex-col relative">
