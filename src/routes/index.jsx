@@ -5,6 +5,7 @@ import {
   ColorGuessingGame,
   WalkthroughPage,
   LoginPage,
+  ShowVideo
 } from "../pages";
 import {
   createBrowserRouter,
@@ -20,6 +21,7 @@ export const router = createBrowserRouter(
       <Route path="color-guessing-game" element={<ColorGuessingGame />} />
       <Route path="walkthrough" element={<WalkthroughPage />} />
       <Route path="login-page" element={<LoginPage />} />
+      <Route path="video" element={<ShowVideo />} />
     </Route>
   )
 );
