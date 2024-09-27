@@ -6,6 +6,7 @@ import {
   WalkthroughPage,
   LoginPage,
   ShowVideo,
+  LoadingVideo
 } from "../pages";
 import {
   createBrowserRouter,
@@ -24,6 +25,7 @@ export const router = createBrowserRouter(
       <Route path="welcome" element={<WelcomePage />} />
       <Route path="login-page" element={<LoginPage />} />
       <Route path="video" element={<ShowVideo />} />
+      <Route path="video-loading" element={<LoadingVideo />} />
     </Route>
   )
 );

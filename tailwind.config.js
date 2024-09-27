@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         "summary-notes": ['"Summary Notes"', "sans-serif"],
       },
+      backgroundImage: {
+        'gif-background': "url('/src/assets/video/spinner.gif')", // Replace with your GIF path
+      },
     },
     plugins: [],
   },
