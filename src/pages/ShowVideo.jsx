@@ -8,12 +8,11 @@ import Reload from "../assets/video/reload.svg";
 import Volume from "../assets/video/volume.svg";
 import Mute from "../assets/video/mute.svg";
 
-
 const VideoPlayer = () => {
   const navigate = useNavigate();
   const [isMuted, setIsMuted] = useState(false);
   const [videoUrl, setVideoUrl] = useState(
-    "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4"
+    "https://100units-multi-media-assets.s3.ap-south-1.amazonaws.com/output/final_output_video_841aaada-52b9-49e9-8ee9-63677016e049.mp4"
   );
   const handleMute = () => {
     setIsMuted(!isMuted);
@@ -39,9 +38,9 @@ const VideoPlayer = () => {
             onClick={handleMute}
           >
             {isMuted ? (
-              <img src={Mute} className="w-10 h-10"/>
+              <img src={Mute} className="w-10 h-10" />
             ) : (
-              <img src={Volume} className="w-10 h-10"/>
+              <img src={Volume} className="w-10 h-10" />
             )}
           </motion.button>
         </div>
@@ -65,7 +64,10 @@ const VideoPlayer = () => {
         After watching the video, ask your child to complete the activity and
         get back to you once it's done. This will improve their experience.
       </p>
-      <div className="mx-auto w-[100%] cursor-pointer" onClick={() => navigate("/activity")}>
+      <div
+        className="mx-auto w-[100%] cursor-pointer"
+        onClick={() => navigate("/activity")}
+      >
         <img src={Button} className="h-[80px] w-full" />
       </div>
       {/* <button className="bg-red-500 text-white py-3 px-6 rounded-full text-xl font-bold mb-4 transform transition-transform duration-200 hover:scale-105">

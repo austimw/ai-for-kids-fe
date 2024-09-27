@@ -1,16 +1,33 @@
 import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
+import { useEffect } from "react";
 
 export default function HomePage() {
+  const { data, loading, error, fetchData } = useFetch();
+
+  useEffect(() => {
+    fetchData("/stories");
+  }, []);
+
   const navigate = useNavigate();
 
   const handleCreateClick = () => {
     navigate("/welcome");
   };
+
   return (
     <div className="w-full h-full bg-yellow-300 p-6 flex flex-col relative">
-        <img src="src/assets/general/badge.svg" alt="" className="absolute w-[69px] h-[62.95px] z-10 top-[23px] right-[12px]"/>
-        <img src="src/assets/general/white-bg.svg" alt="" className="absolute w-[70px] h-[62.95px] top-[31px] right-[20px]"/>
+      <img
+        src="src/assets/general/badge.svg"
+        alt=""
+        className="absolute w-[69px] h-[62.95px] z-10 top-[23px] right-[12px]"
+      />
+      <img
+        src="src/assets/general/white-bg.svg"
+        alt=""
+        className="absolute w-[70px] h-[62.95px] top-[31px] right-[20px]"
+      />
       <header className="mb-6 mt-20">
         <h2 className="text-xl font-semibold">Hello</h2>
         <h1 className="text-4xl font-bold mb-2">Reev!</h1>

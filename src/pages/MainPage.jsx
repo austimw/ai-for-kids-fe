@@ -18,7 +18,6 @@ export const MainPage = () => {
 
   useEffect(() => {
     const playAudio = (val) => {
-      console.log(val?.target?.id);
       if (val?.target?.id === "mute-button") {
         audioRef.current.muted = !audioRef.current.muted;
       }

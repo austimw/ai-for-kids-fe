@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import OwlIcon from "../assets/video/owl-icon.svg";
 import BulbIcon from "../assets/video/bulb-icon.svg";
 import Flower from "../assets/video/flower.svg";
 import Comment from "../assets/video/comment.svg";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
+import { generatedVideoId } from "../atoms/generatedVideo";
+import { useRecoilState } from "recoil";
 
 const owlVariants = {
   jump: {
@@ -12,7 +15,7 @@ const owlVariants = {
     transition: {
       duration: 0.5,
       repeat: Infinity,
-      repeatType: 'loop',
+      repeatType: "loop",
     },
   },
 };
@@ -27,11 +30,24 @@ const flowerVariants = {
   normal: { scale: 1, opacity: 0.5 },
 };
 
-const LoadingScreen= () => {
+const LoadingScreen = () => {
+  const { data, loading, error, fetchData } = useFetch();
+
   const [progress, setProgress] = useState(0);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentFlowerIndex, setCurrentFlowerIndex] = useState(0);
+  const [videoId, setVideoId] = useRecoilState(generatedVideoId);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      fetchData(`/stories/${videoId}`);
+    }, 3000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   const texts = [
     "By involving kids in the story creation process, they become active participants.",
@@ -42,7 +58,9 @@ const LoadingScreen= () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 1
+      );
     }, 100);
 
     const textAndFlowerTimer = setInterval(() => {
@@ -58,7 +76,7 @@ const LoadingScreen= () => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate('/video')
+      navigate("/video");
     }, 5000);
   }, []);
 
@@ -73,7 +91,7 @@ const LoadingScreen= () => {
           duration={0.5}
           animate="jump"
         />
-        <img src={Comment} className='animate-bounce-scale'/>
+        <img src={Comment} className="animate-bounce-scale" />
       </div>
 
       <div className="w-full max-w-md bg-white rounded-full h-4 my-36">
@@ -81,7 +99,7 @@ const LoadingScreen= () => {
           className="bg-red-500 h-4 rounded-full transition-all duration-300 ease-out font-semibold text-sm font-sans flex items-center justify-center text-white"
           style={{ width: `${progress}%` }}
         >
-            {progress}%
+          {progress}%
         </div>
       </div>
 
@@ -115,7 +133,7 @@ const LoadingScreen= () => {
             transition={{ duration: 0.9 }}
             className="text-3xl"
           >
-            <img src={Flower}/>
+            <img src={Flower} />
           </motion.div>
         ))}
       </div>

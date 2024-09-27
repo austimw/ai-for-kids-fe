@@ -5,8 +5,6 @@ import {
   WelcomeGreetingOne,
   SpeakerYellow,
   WelcomeBack,
-  WelcomeNext,
-  WelcomeFlowers,
   HelpMeIdea,
   GenerateVideo,
 } from "../assets";
@@ -16,12 +14,26 @@ import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { ideaParams } from "../atoms/ideaAtom";
 import LanguageDropdown from "./LanguageDropDown";
+import useFetch from "../hooks/useFetch";
+import { generatedVideoId } from "../atoms/generatedVideo";
 
 function WelcomePage() {
+  const { data, loading, error, fetchData } = useFetch({
+    method: "POST",
+  });
   const navigate = useNavigate();
   const [openHelpModal, setOpenHelpModal] = useState(false);
   const [storyInput, setStoryInput] = useState("");
   const [selectedItem, setSelectedItem] = useRecoilState(ideaParams);
+
+  const [videoId, setVideoId] = useRecoilState(generatedVideoId);
+
+  useEffect(() => {
+    if (data) {
+      setVideoId(data.id);
+      navigate("/video-loading");
+    }
+  }, [data]);
 
   const handleOpenHelpModal = () => {
     setOpenHelpModal(true);
@@ -39,8 +51,6 @@ function WelcomePage() {
     setStoryInput(e.target.value);
   };
 
-  console.log({ selectedItem });
-
   useEffect(() => {
     if (
       selectedItem.Characters &&
@@ -54,10 +64,8 @@ function WelcomePage() {
   }, [selectedItem]);
 
   const handleGenerateVideo = () => {
-    navigate("/video-loading");
+    fetchData("/stories", { body: { prompt: storyInput } });
   };
-
-  console.log({ storyInput });
 
   return (
     <div className="relative w-[500px]">
