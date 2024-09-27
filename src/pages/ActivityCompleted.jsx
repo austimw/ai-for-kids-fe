@@ -35,7 +35,7 @@ export default function ActivityCompleted() {
       </div>
 
       {/* SVG for wavy background */}
-      <img src="src/assets/general/yellow-wave.png" alt="" className="absolute bottom-0"/>
+      <img src="src/assets/general/yellow-wave.png" alt="" className="absolute bottom-[-20px] w-[500px]"/>
       
     </div>
   )
