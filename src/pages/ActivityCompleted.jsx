@@ -8,7 +8,7 @@ export default function ActivityCompleted() {
         <img src="src/assets/general/completed.png" alt="" className="absolute top-[47.44px]"/>
 
         {/* Reward section */}
-        <div className="w-[266px] h-[339px] top-[184px] gap-0 rounded-[30px] bg-[#FFF5D1] flex flex-col justify-center mt-[37px] px-[15px]">
+        <div className="w-[266px] h-[339px] top-[184px] gap-0 rounded-[30px] bg-[#FFF5D1] flex flex-col justify-center mt-[72px] px-[15px]">
         <h2 className="text-[24.67px] font-normal leading-[29.6px] tracking-[0.02em] text-center mt-[22px] mb-[10px]">You have achieved a<br></br> badge!</h2>
         <img src="src/assets/general/badge-real.png" alt="" />
         </div>
