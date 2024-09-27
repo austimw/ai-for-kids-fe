@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.8",
+    "@heroicons/react": "^2.1.5",
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.8.0",
     "lucide-react": "^0.446.0",

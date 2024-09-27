@@ -1,18 +1,14 @@
 import {
-  Family,
-  Friends,
-  Princess,
-  Mermaid,
-  Superheros,
-  TalkingAnimals,
-  Unicorns,
+  Bear,
+  Dog,
+  Dolphin,
+  Elephant,
+  Tiger,
+  Unicorn,
   AtHome,
   AtSchool,
   InCity,
-  WithFriends,
   MysticForest,
-  OnShip,
-  OuterSpace,
   DefeatVillian,
   DiscoverSomething,
   Journey,
@@ -26,33 +22,27 @@ import {
 import Slider from "./Slider";
 
 const characters = [
-  { name: "Family", image: Family },
-  { name: "Friends", image: Friends },
-  { name: "Princes", image: Princess },
-  { name: "Mermaid", image: Mermaid },
-  { name: "Super heroes", image: Superheros },
-  { name: "Talking Animals", image: TalkingAnimals },
-  { name: "Unicorns", image: Unicorns },
+  { name: "Unicorn", image: Unicorn },
+  { name: "Dog", image: Dog },
+  { name: "Dolphin", image: Dolphin },
+  { name: "Elephant", image: Elephant },
+  { name: "Tiger", image: Tiger },
+  { name: "Bear", image: Bear },
 ];
 
 const setting = [
   { name: "At Home", image: AtHome },
   { name: "At School", image: AtSchool },
   { name: "In a city", image: InCity },
-  { name: "With friends", image: WithFriends },
   { name: "Mystic Forest", image: MysticForest },
-  { name: "On ship", image: OnShip },
-  { name: "Outer space", image: OuterSpace },
 ];
 
-const plot = [
-  { name: "Defeat villains", image: DefeatVillian },
-  { name: "Discover something", image: DiscoverSomething },
-  { name: "Journey", image: Journey },
-  { name: "Learning lessons", image: LearningLesson },
-  { name: "Making friends", image: MakingFriends },
-  { name: "Saving the day", image: SavingTheDay },
-  { name: "Solving mystery", image: SolvingMystery },
+const Morals = [
+  { name: "Sharing is caring" },
+  { name: "Be truthful and honest." },
+  { name: "Appreciate what you love." },
+  { name: "Believe in yourself" },
+  { name: "Face you fears." },
 ];
 
 const StoryCreator = ({ handleClose, className }) => {
@@ -80,9 +70,9 @@ const StoryCreator = ({ handleClose, className }) => {
           sliderItems={setting}
         />
         <Slider
-          heading="Plot"
-          description="What happens in your story ?"
-          sliderItems={plot}
+          heading="Morals"
+          description="What should be the learning from your story? ?"
+          sliderItems={Morals}
         />
         <div className="mx-auto">
           <img

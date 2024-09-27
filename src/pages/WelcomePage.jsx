@@ -8,12 +8,14 @@ import {
   WelcomeNext,
   WelcomeFlowers,
   HelpMeIdea,
+  GenerateVideo,
 } from "../assets";
 
 import StoryCreator from "./StoryCreator";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { ideaParams } from "../atoms/ideaAtom";
+import LanguageDropdown from "./LanguageDropDown";
 
 function WelcomePage() {
   const navigate = useNavigate();
@@ -40,11 +42,14 @@ function WelcomePage() {
   console.log({ selectedItem });
 
   useEffect(() => {
-    if (selectedItem.Characters && selectedItem.Setting && selectedItem.Plot) {
+    if (
+      selectedItem.Characters &&
+      selectedItem.Setting &&
+      selectedItem.Morals
+    ) {
       setStoryInput(
-        `Story about a ${selectedItem.Characters} in a ${selectedItem.Setting} in the ${selectedItem.Plot}`
+        `Story about a ${selectedItem.Characters} in a ${selectedItem.Setting} in the ${selectedItem.Morals}`
       );
-      setSelectedItem({});
     }
   }, [selectedItem]);
 
@@ -73,7 +78,7 @@ function WelcomePage() {
             className="absolute top-28 left-20"
           />
           <div className="absolute bottom-0 w-full flex justify-center items-center flex-col pb-12">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center py-8">
               <div className="text-[20px]">My story is about</div>
               <textarea
                 type="text"
@@ -84,18 +89,27 @@ function WelcomePage() {
               />
             </div>
             <img
+              src="src/assets/common/Bulb.gif"
+              className="absolute w-[54px] h-[60px] top-[180px] right-[120px] transform rotate-[30deg] z-5 rounded-full"
+            />
+            <img
               src={HelpMeIdea}
               alt="Help"
-              className=" w-72 cursor-pointer"
+              className="w-72 h-14 cursor-pointer"
               onClick={handleOpenHelpModal}
             />
-            <div className="h-16 flex items-center m-auto">
-              <img src={WelcomeFlowers} alt="Flowers" className="w-28" />
+            <div className="flex items-center m-auto flex-col py-8">
+              <span>Select language</span>
+              <LanguageDropdown />
             </div>
             <img
-              src={WelcomeNext}
-              alt="Next"
-              className="cursor-pointer w-full px-16"
+              src="src/assets/common/Video.gif"
+              className="absolute w-[48px] h-[45px] bottom-[130px] left-[100px] transform rotate-[-30deg] z-5 rounded-2xl"
+            />
+            <img
+              src={GenerateVideo}
+              alt="Generate"
+              className="cursor-pointer w-full px-16 pt-4"
             />
           </div>
         </div>
