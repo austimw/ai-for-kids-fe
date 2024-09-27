@@ -2,7 +2,7 @@ import { ArrowLeft, Volume2 } from 'lucide-react'
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-yellow-300 to-blue-100 flex flex-col">
+    <div className="w-full h-full bg-gradient-to-b from-yellow-300 to-blue-100 flex flex-col">
       {/* Top section */}
       <div className="bg-yellow-300 rounded-b-[50px] pb-16 pt-4 px-4 relative">
         <div className="flex justify-between mb-8">
