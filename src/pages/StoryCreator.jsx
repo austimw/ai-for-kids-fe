@@ -21,6 +21,7 @@ import {
   SavingTheDay,
   SolvingMystery,
   Cross,
+  Done,
 } from "../assets";
 import Slider from "./Slider";
 
@@ -57,17 +58,17 @@ const plot = [
 const StoryCreator = ({ handleClose, className }) => {
   return (
     <div
-      className={`flex h-[90%] w-[470px] flex-col bg-white rounded-lg p-5 mx-4 ${className}`}
+      className={`flex h-[90%] w-full flex-col bg-white rounded-[32px] p-5 ${className}`}
     >
       <div className="text-black flex justify-end">
         <img
           src={Cross}
           alt="Close"
-          className="w-10 h-10 cursor-pointer"
+          className="w-8 h-8 cursor-pointer"
           onClick={handleClose}
         />
       </div>
-      <div className="flex flex-col gap-6 overflow-y-auto no-scrollbar">
+      <div className="flex flex-col gap-2 overflow-y-auto no-scrollbar">
         <Slider
           heading="Characters"
           description="Who&rsquo;s your story about ?"
@@ -83,6 +84,14 @@ const StoryCreator = ({ handleClose, className }) => {
           description="What happens in your story ?"
           sliderItems={plot}
         />
+        <div className="mx-auto">
+          <img
+            src={Done}
+            alt="Close"
+            className="fixed bottom-8 left-32 cursor-pointer"
+            onClick={handleClose}
+          />
+        </div>
       </div>
     </div>
   );

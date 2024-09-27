@@ -46,7 +46,7 @@ import SpeakerYellow from "./common/SpeakerYellow.svg";
 import WelcomeNext from "./common/WelcomeNext.svg";
 import WelcomeFlowers from "./common/WelcomeFlowers.svg";
 import HelpMeIdea from "./common/HelpMeIdea.svg";
-
+import Done from "./common/Done.svg";
 
 export {
   BGYellow,
@@ -94,4 +94,5 @@ export {
   WelcomeNext,
   WelcomeFlowers,
   HelpMeIdea,
+  Done,
 };

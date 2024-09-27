@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   WelcomeBg,
   Bgyellow,
@@ -11,9 +11,15 @@ import {
 } from "../assets";
 
 import StoryCreator from "./StoryCreator";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { ideaParams } from "../atoms/ideaAtom";
 
 function WelcomePage() {
+  const navigate = useNavigate();
   const [openHelpModal, setOpenHelpModal] = useState(false);
+  const [storyInput, setStoryInput] = useState("");
+  const [selectedItem, setSelectedItem] = useRecoilState(ideaParams);
 
   const handleOpenHelpModal = () => {
     setOpenHelpModal(true);
@@ -23,8 +29,29 @@ function WelcomePage() {
     setOpenHelpModal(false);
   };
 
+  const handleNavigateBack = () => {
+    navigate(-1);
+  };
+
+  const handleStoryInput = (e) => {
+    setStoryInput(e.target.value);
+  };
+
+  console.log({ selectedItem });
+
+  useEffect(() => {
+    if (selectedItem.Characters && selectedItem.Setting && selectedItem.Plot) {
+      setStoryInput(
+        `Story about a ${selectedItem.Characters} in a ${selectedItem.Setting} in the ${selectedItem.Plot}`
+      );
+      setSelectedItem({});
+    }
+  }, [selectedItem]);
+
+  console.log({ storyInput });
+
   return (
-    <div className="relative w-full">
+    <div className="relative w-[500px]">
       <div
         className="bg-cover bg-center h-full w-full align-middle"
         style={{ backgroundImage: `url(${WelcomeBg})` }}
@@ -32,8 +59,13 @@ function WelcomePage() {
         <div className="h-full w-full flex items-center relative">
           <img src={Bgyellow} alt="yellow" className="w-full h-full" />
           <div className="absolute top-0 left-0 w-full flex justify-between py-16 px-8">
-            <img src={WelcomeBack} alt="Back" />
-            <img src={SpeakerYellow} alt="Speaker" />
+            <img
+              src={WelcomeBack}
+              alt="Back"
+              className="cursor-pointer"
+              onClick={handleNavigateBack}
+            />
+            <img src={SpeakerYellow} alt="Speaker" className="cursor-pointer" />
           </div>
           <img
             src={WelcomeGreetingOne}
@@ -45,14 +77,16 @@ function WelcomePage() {
               <div className="text-[20px]">My story is about</div>
               <textarea
                 type="text"
-                className="z-0 w-[350px] h-[120px] text-lg border-4 border-blue-300 rounded-lg p-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="z-0 w-[350px] h-[120px] text-lg border-4 border-blue-300 rounded-lg p-4 text-gray-500 focus:outline-none resize-none"
                 placeholder="Story about a Princess who meets a Unicorn in the magical forest"
+                value={storyInput}
+                onChange={handleStoryInput}
               />
             </div>
             <img
               src={HelpMeIdea}
               alt="Help"
-              className=" w-72"
+              className=" w-72 cursor-pointer"
               onClick={handleOpenHelpModal}
             />
             <div className="h-16 flex items-center m-auto">
