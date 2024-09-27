@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import confetti from "canvas-confetti";
 import { GameBg, GameIcon, CheckedIcon } from "../assets";
+import ConfirmationDialog from "./confirmation-modal";
 
 const questions = [
   {
@@ -45,8 +46,11 @@ export default function ColorGuessingGame() {
     setShowResult(true);
   };
 
+  const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false)
+
   const handleSubmitAnswer = () => {
-    navigate("/activity-completed");
+    setIsConfirmationModalOpen(true)
+    // navigate("/activity-completed");
   };
 
   const nextQuestion = () => {
@@ -61,6 +65,8 @@ export default function ColorGuessingGame() {
       setScore(0);
     }
   };
+
+  const onCrossClick = ()=>setIsConfirmationModalOpen(false)
 
   return (
     <div className="bg-blue-100 overflow-hidden rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 relative flex flex-col items-center">
@@ -99,6 +105,9 @@ export default function ColorGuessingGame() {
             className="absolute top-2 left-2"
           />
         </button>
+      )}
+      {isConfirmationModalOpen && (
+        <ConfirmationDialog onCrossClick={onCrossClick}/>
       )}
     </div>
   );
