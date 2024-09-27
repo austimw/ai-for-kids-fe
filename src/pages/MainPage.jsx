@@ -13,7 +13,7 @@ export const MainPage = () => {
   }, [location]);
 
   return (
-    <div className="h-full w-full flex justify-center">
+    <div className="h-full w-[700px] flex justify-center">
       <Outlet />
     </div>
   );

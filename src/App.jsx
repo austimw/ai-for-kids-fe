@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <div className='App w-full'>
+     <div className='App w-full flex justify-center'>
       <RouterProvider router={router} />
     </div>
     </>
