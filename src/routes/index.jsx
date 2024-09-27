@@ -6,12 +6,14 @@ import {
   WalkthroughPage,
   LoginPage,
   ShowVideo,
+  LoadingVideo
 } from "../pages";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import HomePage from "../pages/HomePage";
 import WelcomePage from "../pages/WelcomePage";
 
 export const router = createBrowserRouter(
@@ -23,7 +25,9 @@ export const router = createBrowserRouter(
       <Route path="walkthrough" element={<WalkthroughPage />} />
       <Route path="welcome" element={<WelcomePage />} />
       <Route path="login-page" element={<LoginPage />} />
+      <Route path="home-page" element={<HomePage />} />
       <Route path="video" element={<ShowVideo />} />
+      <Route path="video-loading" element={<LoadingVideo />} />
     </Route>
   )
 );
