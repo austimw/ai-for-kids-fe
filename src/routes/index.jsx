@@ -11,6 +11,7 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import HomePage from "../pages/HomePage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ export const router = createBrowserRouter(
       <Route path="color-guessing-game" element={<ColorGuessingGame />} />
       <Route path="walkthrough" element={<WalkthroughPage />} />
       <Route path="login-page" element={<LoginPage />} />
+      <Route path="home-page" element={<HomePage />} />
     </Route>
   )
 );
