@@ -65,7 +65,7 @@ const LoadingScreen= () => {
           duration={0.5}
           animate="jump"
         />
-        <img src={Comment}/>
+        <img src={Comment} className='animate-bounce-scale'/>
       </div>
 
       <div className="w-full max-w-md bg-white rounded-full h-4 my-36">
