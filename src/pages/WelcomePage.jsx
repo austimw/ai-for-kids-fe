@@ -70,7 +70,12 @@ function WelcomePage() {
               className="cursor-pointer"
               onClick={handleNavigateBack}
             />
-            <img src={SpeakerYellow} alt="Speaker" className="cursor-pointer" />
+            <img
+              src={SpeakerYellow}
+              alt="Speaker"
+              className="cursor-pointer"
+              id="mute-button"
+            />
           </div>
           <img
             src={WelcomeGreetingOne}

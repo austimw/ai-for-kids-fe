@@ -54,7 +54,11 @@ export default function WalkthroughPage() {
     <div className="w-full h-full flex flex-col bg-[#F0F0F0] rounded-lg shadow-lg overflow-hidden">
       <div className="relative flex flex-col items-center w-full">
         <div className="flex justify-end w-full p-4 gap-4">
-          <img src={SoundButton} className="w-[44px] h-[44px]" />
+          <img
+            src={SoundButton}
+            className="w-[44px] h-[44px]"
+            id="mute-button"
+          />
           <img src={SkipButton} className="w-[81px] h-[44px]" />
         </div>
         <h2 className="text-[30px] font-normal text-center pt-6">
