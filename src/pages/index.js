@@ -4,6 +4,8 @@ import { CategoryPage } from "./CategoryPage";
 import ColorGuessingGame from "./ColorGuessingGame";
 import WalkthroughPage from "./WalkthroughPage";
 import LoginPage from "./LoginPage"
+import ShowVideo  from "./ShowVideo";
+import LoadingVideo from "./LoadingVideo";
 
 export {
   MainPage,
@@ -11,5 +13,7 @@ export {
   CategoryPage,
   ColorGuessingGame,
   WalkthroughPage,
-  LoginPage
+  LoginPage,
+  ShowVideo,
+  LoadingVideo
 };
