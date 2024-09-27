@@ -1,6 +1,12 @@
 import { Play, CheckCircle, Video } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  const handleCreateClick = () => {
+    navigate("/welcome");
+  }
   return (
     <div className="w-full h-full bg-yellow-300 p-6 flex flex-col">
       <header className="mb-6 mt-20">
@@ -41,7 +47,7 @@ export default function HomePage() {
       </div>
 
       <div className='flex justify-center w-full'>
-      <button className="bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[400px] shadow-[0_8px_0_#9d361f]">
+      <button onClick={handleCreateClick} className="bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[400px] shadow-[0_8px_0_#9d361f]">
         Create Video
         <img src="src/assets/general/play-button.gif" className="absolute w-[48px] h-[45px] absolute top-[-25px] left-[25px] transform rotate-[-30deg] z-5"/>
         <img src="src/assets/general/oval-bubble.svg" className="absolute top-2 left-2"/>

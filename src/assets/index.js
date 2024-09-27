@@ -13,6 +13,7 @@ import ThirdEgg from "./icons/third-egg.svg";
 import StoryIdea from "./icons/story-idea.svg";
 import MoralIdea from "./icons/moral-idea.svg";
 import ActivityIdea from "./icons/activity-icon.svg";
+import LandingPageIcon from "./icons/landing-page.svg";
 
 import Family from "./characters/Family.svg";
 import Friends from "./characters/Friends.svg";
@@ -95,4 +96,5 @@ export {
   WelcomeFlowers,
   HelpMeIdea,
   Done,
+  LandingPageIcon
 };

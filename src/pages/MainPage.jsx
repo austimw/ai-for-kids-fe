@@ -28,8 +28,8 @@ export const MainPage = () => {
     return () => document.removeEventListener("click", playAudio);
   }, []);
 
-  return (
-    <div className="h-[90%] w-[500px] flex justify-center">
+  return ( 
+    <div className="h-[90%] w-[500px] flex justify-center rounded-lg overflow-hidden">
       <audio ref={audioRef} loop>
         {/* <source src={Item} type="audio/mp4" /> */}
       </audio>
