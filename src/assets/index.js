@@ -48,6 +48,15 @@ import WelcomeNext from "./common/WelcomeNext.svg";
 import WelcomeFlowers from "./common/WelcomeFlowers.svg";
 import HelpMeIdea from "./common/HelpMeIdea.svg";
 import Done from "./common/Done.svg";
+import GameBg from "./icons/game-bg.svg";
+import GameIcon from "./icons/game-icon.svg";
+import CheckedIcon from "./icons/checked-icon.svg";
+import LandingBg from "./icons/landing-bg.svg";
+import LandingIcon from "./icons/landing-icon.svg";
+import LandingBell from "./icons/landing-bell.svg";
+import Egg1 from "./icons/egg1.svg";
+import Egg2 from "./icons/egg2.svg";
+import Egg3 from "./icons/egg3.svg";
 
 export {
   BGYellow,
@@ -96,5 +105,14 @@ export {
   WelcomeFlowers,
   HelpMeIdea,
   Done,
-  LandingPageIcon
+  LandingPageIcon,
+  GameBg,
+  GameIcon,
+  CheckedIcon,
+  LandingBg,
+  LandingIcon,
+  LandingBell,
+  Egg1,
+  Egg2,
+  Egg3,
 };
