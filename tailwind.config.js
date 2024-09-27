@@ -7,7 +7,7 @@ export default {
         'summary-notes': ['"Summary Notes"', 'sans-serif'],
       },
       backgroundImage: {
-        'gif-background': "url('/src/assets/video/spinner.gif')", // Replace with your GIF path
+        'gif-background': "url('/src/assets/video/spinner_final.gif')", // Replace with your GIF path
       },
       keyframes: {
         'bounce-scale': {

@@ -15,6 +15,8 @@ import {
 } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import WelcomePage from "../pages/WelcomePage";
+import Activity from "../pages/Activity";
+
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +30,7 @@ export const router = createBrowserRouter(
       <Route path="home-page" element={<HomePage />} />
       <Route path="video" element={<ShowVideo />} />
       <Route path="video-loading" element={<LoadingVideo />} />
+      <Route path="activity" element={<Activity />} />
     </Route>
   )
 );

@@ -55,7 +55,7 @@ const LoadingScreen= () => {
   }, []);
 
   return (
-    <div className="bg-gif-background w-[500px] bg-cover bg-center min-h-screen bg-yellow-300 flex flex-col items-center py-24 px-10">
+    <div className="bg-gif-background w-[500px] bg-cover bg-center bg-yellow-300 flex flex-col items-center py-24 px-10">
       <div className="flex items-start w-full mt-14">
         <motion.img
           src={OwlIcon}
@@ -77,7 +77,7 @@ const LoadingScreen= () => {
         </div>
       </div>
 
-      <div className="relative w-full max-w-md mb-1 mt-10">
+      <div className="relative w-full max-w-md mb-1 mt-4">
         <img
           src={BulbIcon}
           alt="Light bulb"

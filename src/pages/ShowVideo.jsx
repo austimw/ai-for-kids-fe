@@ -20,7 +20,7 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#3c3c28] text-white py-10 px-10 flex flex-col">
+    <div className="bg-[#3c3c28] text-white py-10 px-10 flex flex-col">
       <div className="flex justify-between mb-4">
         <button className="bg-red-500 p-2 rounded-lg">
           <X size={24} />
@@ -65,7 +65,7 @@ const VideoPlayer = () => {
         After watching the video, ask your child to complete the activity and
         get back to you once it's done. This will improve their experience.
       </p>
-      <div className="mx-auto w-[100%] cursor-pointer" onClick={() => navigate("/")}>
+      <div className="mx-auto w-[100%] cursor-pointer" onClick={() => navigate("/activity")}>
         <img src={Button} className="h-[80px] w-full" />
       </div>
       {/* <button className="bg-red-500 text-white py-3 px-6 rounded-full text-xl font-bold mb-4 transform transition-transform duration-200 hover:scale-105">
