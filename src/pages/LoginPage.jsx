@@ -32,7 +32,7 @@ export default function LoginPage() {
       </div>
 
       {/* Content section */}
-      <div className="flex-1 px-6 pt-8 ">
+      <div className="flex-1 px-16 pt-8 ">
         <div className="flex space-x-4 mb-6">
           <button className="flex-1 bg-[#4AA378] text-white py-3 rounded-xl text-lg font-semibold shadow-[4px_4px_#167143]">
             Login
@@ -60,7 +60,7 @@ export default function LoginPage() {
         </p>
 
         <div className="flex justify-center font-summary-notes">
-          <button onClick={handleClick} className="w-[203px] bg-red-500 text-white py-3 rounded-xl text-xl font-semibold mb-4 shadow-[4px_4px_#b9523b]">
+          <button onClick={handleClick} className="hover:scale-105 active:scale-95 w-[203px] bg-red-500 text-white py-3 rounded-xl text-xl font-normal mb-4 shadow-[4px_4px_#b9523b]">
             Continue
           </button>
         </div>

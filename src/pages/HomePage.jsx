@@ -85,7 +85,7 @@ export default function HomePage() {
       <div className="flex justify-center w-full">
         <button
           onClick={handleCreateClick}
-          className="bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[350px] shadow-[0_8px_0_#9d361f]"
+          className=" hover:scale-105 active:scale-95 bg-red-500 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center relative w-[350px] shadow-[0_8px_0_#9d361f]"
         >
           Create Video
           <img

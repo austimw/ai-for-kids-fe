@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function ActivityCompleted() {
   const navigate = useNavigate();
@@ -37,14 +37,14 @@ export default function ActivityCompleted() {
       <div className="relative flex justify-center">
         <div className="relative z-10 px-8 py-6 space-y-4 w-[414px]">
           <button
-            className="w-full bg-gradient-to-b from-red-400 to-red-500 text-white text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#ac3f26]"
-            onClick={() => navigate('/welcome')}
+            className="hover:scale-105 active:scale-95 w-full bg-gradient-to-b from-red-400 to-red-500 text-white text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#ac3f26]"
+            onClick={() => navigate("/welcome")}
           >
             Create new video
           </button>
           <button
-            className="w-full bg-white text-gray-800 text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#acb4c0] border border-gray-300"
-            onClick={() => navigate('/home')}
+            className="hover:scale-105 active:scale-95 w-full bg-white text-gray-800 text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#acb4c0] border border-gray-300"
+            onClick={() => navigate("/home")}
           >
             Go to Home
           </button>

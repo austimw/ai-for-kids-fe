@@ -32,7 +32,7 @@ function WelcomePage() {
               src={SharingImage}
               className="px-auto py-4 cursor-pointer"
             />
-            <img src={ButtonIcon} onClick={handleActivityComplete} />
+            <img src={ButtonIcon} onClick={handleActivityComplete} className="cursor-pointer" />
             <button className="text-gray-400 mt-10 text-xl font-summary-notes">
               Skip & Go to Home
             </button>
