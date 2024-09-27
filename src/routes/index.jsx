@@ -15,13 +15,14 @@ import {
 import HomePage from "../pages/HomePage";
 import WelcomePage from "../pages/WelcomePage";
 import Activity from "../pages/Activity";
+import ActivityCompleted from "../pages/ActivityCompleted";
 
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainPage />}>
       <Route path="landing-page" element={<LandingPage />} />
-      <Route path="color-guessing-game" element={<ColorGuessingGame />} />
+      <Route path="game" element={<ColorGuessingGame />} />
       <Route path="walkthrough" element={<WalkthroughPage />} />
       <Route path="welcome" element={<WelcomePage />} />
       <Route path="login" element={<LoginPage />} />
@@ -29,6 +30,7 @@ export const router = createBrowserRouter(
       <Route path="video" element={<ShowVideo />} />
       <Route path="video-loading" element={<LoadingVideo />} />
       <Route path="activity" element={<Activity />} />
+      <Route path="activity-completed" element={<ActivityCompleted />} />
     </Route>
   )
 );

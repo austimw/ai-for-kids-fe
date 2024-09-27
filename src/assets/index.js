@@ -47,6 +47,15 @@ import Done from "./common/Done.svg";
 import GenerateVideo from "./common/GenerateVideo.svg";
 import DownArrow from "./common/DownArrow.svg";
 import Selected from "./common/Selected.svg";
+import GameBg from "./icons/game-bg.svg";
+import GameIcon from "./icons/game-icon.svg";
+import CheckedIcon from "./icons/checked-icon.svg";
+import LandingBg from "./icons/landing-bg.svg";
+import LandingIcon from "./icons/landing-icon.svg";
+import LandingBell from "./icons/landing-bell.svg";
+import Egg1 from "./icons/egg1.svg";
+import Egg2 from "./icons/egg2.svg";
+import Egg3 from "./icons/egg3.svg";
 
 export {
   BGYellow,
@@ -95,4 +104,13 @@ export {
   Elephant,
   Dolphin,
   Selected,
+  GameBg,
+  GameIcon,
+  CheckedIcon,
+  LandingBg,
+  LandingIcon,
+  LandingBell,
+  Egg1,
+  Egg2,
+  Egg3,
 };

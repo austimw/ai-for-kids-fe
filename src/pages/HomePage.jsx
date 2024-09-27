@@ -1,4 +1,4 @@
-import { Play, CheckCircle, Video } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {

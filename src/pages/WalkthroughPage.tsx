@@ -19,9 +19,21 @@ export default function WalkthroughPage() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
   const steps = [
-    "Describe your story's idea",
-    "Tell about the moral of your story?",
-    "Complete activity and gain Stars!",
+    {
+      title: "Engaging Learning",
+      description:
+        "The app turns moral lessons into fun, captivating story videos that enhance children's understanding.",
+    },
+    {
+      title: "Personalized Experiences",
+      description:
+        "AI tailors stories to individual interests, fostering deeper connections to moral concepts.",
+    },
+    {
+      title: "Creative Expression",
+      description:
+        "Kids can participate in story creation, boosting imagination while reinforcing important values.",
+    },
   ];
 
   const nextStep = () => {
@@ -40,19 +52,22 @@ export default function WalkthroughPage() {
 
   return (
     <div className="w-full h-full flex flex-col bg-[#F0F0F0] rounded-lg shadow-lg overflow-hidden">
-      <div className="relative flex flex-col">
+      <div className="relative flex flex-col items-center w-full">
         <div className="flex justify-end w-full p-4 gap-4">
           <img src={SoundButton} className="w-[44px] h-[44px]" />
           <img src={SkipButton} className="w-[81px] h-[44px]" />
         </div>
-        <h2 className="text-[30px] font-normal text-center py-6">
-          {steps[currentStep]}
+        <h2 className="text-[30px] font-normal text-center pt-6">
+          {steps[currentStep]?.title}
         </h2>
+        <p className="text-xl font-normal text-center text-[#6F6F6F] mb-6 max-w-[330px]">
+          {steps[currentStep]?.description}
+        </p>
       </div>
       <div className="p-6">
         <div className="mb-32 image-div transition-all duration-500 ease-in-out">
           {currentStep === 0 && (
-            <div className="w-full h-48 flex justify-center mb-16 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
               <img
                 src={StoryIdea}
                 className="w-[200px] h-[200px] object-cover"
@@ -60,7 +75,7 @@ export default function WalkthroughPage() {
             </div>
           )}
           {currentStep === 1 && (
-            <div className="w-full h-48 flex justify-center mb-16 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
               <img
                 src={MoralIdea}
                 className="w-[200px] h-[200px] object-cover"
@@ -68,7 +83,7 @@ export default function WalkthroughPage() {
             </div>
           )}
           {currentStep === 2 && (
-            <div className="w-full h-48 flex justify-center mb-16 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
               <img
                 src={ActivityIdea}
                 className="w-[200px] h-[200px] object-cover"
@@ -106,7 +121,7 @@ export default function WalkthroughPage() {
           <img
             src={currentStep === steps.length - 1 ? LetsStart : NextButton}
             className={`w-full cursor-pointer h-[82px] transition-all duration-500 ease-in-out hover:scale-105 active:scale-95 ${
-              currentStep > 0 ? "mb-0" : "mb-[-60px]"
+              currentStep > 0 ? "mb-2" : "mb-[-60px]"
             }`}
             onClick={nextStep}
           />
