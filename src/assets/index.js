@@ -1,3 +1,19 @@
+import BGYellow from "./icons/bg-yellow.svg";
+import NextButton from "./icons/next-button.svg";
+import BackButton from "./icons/back-button.svg";
+import LetsStart from "./icons/let-start.svg";
+import SkipButton from "./icons/skip-button.svg";
+import SoundButton from "./icons/sound-button.svg";
+import FirstStar from "./icons/first-star.svg";
+import SecondStar from "./icons/second-star.svg";
+import ThirdStar from "./icons/third-star.svg";
+import FirstEgg from "./icons/first-egg.svg";
+import SecondEgg from "./icons/second-egg.svg";
+import ThirdEgg from "./icons/third-egg.svg";
+import StoryIdea from "./icons/story-idea.svg";
+import MoralIdea from "./icons/moral-idea.svg";
+import ActivityIdea from "./icons/activity-icon.svg";
+
 import Family from "./characters/Family.svg";
 import Friends from "./characters/Friends.svg";
 import Princess from "./characters/Princess.svg";
@@ -23,7 +39,23 @@ import SavingTheDay from "./plot/SavingTheDay.svg";
 import SolvingMystery from "./plot/SolvingMystery.svg";
 import Cross from "./common/Close.svg";
 
+
 export {
+  BGYellow,
+  NextButton,
+  BackButton,
+  LetsStart,
+  SkipButton,
+  SoundButton,
+  FirstStar,
+  SecondStar,
+  ThirdStar,
+  FirstEgg,
+  SecondEgg,
+  ThirdEgg,
+  StoryIdea,
+  MoralIdea,
+  ActivityIdea,
   Family,
   Friends,
   Princess,
