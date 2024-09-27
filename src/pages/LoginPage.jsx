@@ -2,18 +2,19 @@ import { ArrowLeft, Volume2 } from 'lucide-react'
 
 export default function LoginPage() {
   return (
-    <div className="w-full h-full bg-gradient-to-b from-yellow-300 to-blue-100 flex flex-col">
+    <div className="w-full h-full bg-[#e8f3ff] flex flex-col">
       {/* Top section */}
-      <div className="bg-yellow-300 rounded-b-[50px] pb-16 pt-4 px-4 relative">
-        <div className="flex justify-between mb-8">
+      <img src="src/assets/general/login-page-yellow-bg.png" alt="" className='absolute w-[501px] top-[-90px] left-[380px]'/>
+      <div className="rounded-b-[50px] pb-16 pt-4 px-4 relative">
+        <div className="flex justify-between mb-1">
           <button className="bg-yellow-400 p-2 rounded-full">
-            <ArrowLeft size={24} />
+            <img src="src/assets/general/back-button.svg" alt="" />
           </button>
           <button className="bg-yellow-400 p-2 rounded-full">
-            <Volume2 size={24} />
+            <img src="src/assets/general/sound-button.svg" alt="" />
           </button>
         </div>
-        <h1 className="text-5xl font-bold text-center mb-4">Whims.ai</h1>
+        <h1 className="text-[100px] font-bold text-center mb-4 mt-[-28px] h-[106px]">Whims.ai</h1>
         <div className="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center">
           <img src="src/assets/general/owl.svg" alt="Owl mascot" className="w-20 h-20" />
         </div>
