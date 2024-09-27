@@ -4,6 +4,7 @@ import OwlIcon from "../assets/video/owl-icon.svg";
 import BulbIcon from "../assets/video/bulb-icon.svg";
 import Flower from "../assets/video/flower.svg";
 import Comment from "../assets/video/comment.svg";
+import { useNavigate } from 'react-router-dom';
 
 const owlVariants = {
   jump: {
@@ -30,6 +31,7 @@ const LoadingScreen= () => {
   const [progress, setProgress] = useState(0);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentFlowerIndex, setCurrentFlowerIndex] = useState(0);
+  const navigate = useNavigate();
 
   const texts = [
     "By involving kids in the story creation process, they become active participants.",
@@ -52,6 +54,12 @@ const LoadingScreen= () => {
       clearInterval(timer);
       clearInterval(textAndFlowerTimer);
     };
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/video')
+    }, 5000);
   }, []);
 
   return (

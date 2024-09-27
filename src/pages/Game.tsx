@@ -1,6 +1,5 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import confetti from "canvas-confetti";
 import { GameBg, GameIcon, CheckedIcon } from "../assets";
 
@@ -31,6 +30,7 @@ export default function ColorGuessingGame() {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState("");
+  const navigate = useNavigate();
 
   const handleAnswer = (answer: string) => {
     setSelectedAnswer(answer);
@@ -43,6 +43,10 @@ export default function ColorGuessingGame() {
       });
     }
     setShowResult(true);
+  };
+
+  const handleSubmitAnswer = () => {
+    navigate("/activity-completed");
   };
 
   const nextQuestion = () => {
@@ -62,7 +66,7 @@ export default function ColorGuessingGame() {
     <div className="bg-blue-100 overflow-hidden rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 relative flex flex-col items-center">
       <img src={GameBg} className="absolute bottom-[0] left-0 w-[500px]" />
       <h1 className="text-4xl font-bold text-center my-6 text-black">
-        Activity <span style={{ fontFamily: 'san'}}>2/2</span>
+        Activity <span style={{ fontFamily: "san" }}>2/2</span>
       </h1>
       <div className="text-center mb-6">
         <img
@@ -85,7 +89,10 @@ export default function ColorGuessingGame() {
         ))}
       </div>
       {selectedAnswer && (
-        <button className="hover:scale-105 active:scale-95 bg-red-500 absolute bottom-10 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center w-[400px] shadow-[0_8px_0_#9d361f]">
+        <button
+          onClick={handleSubmitAnswer}
+          className="hover:scale-105 active:scale-95 bg-red-500 absolute bottom-10 text-white text-xl font-bold py-4 px-6 rounded-2xl mt-6 flex items-center justify-center w-[400px] shadow-[0_8px_0_#9d361f]"
+        >
           Submit answer
           <img
             src="src/assets/general/oval-bubble.svg"

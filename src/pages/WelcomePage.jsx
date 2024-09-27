@@ -53,6 +53,10 @@ function WelcomePage() {
     }
   }, [selectedItem]);
 
+  const handleGenerateVideo = () => {
+    navigate("/video-loading");
+  };
+
   console.log({ storyInput });
 
   return (
@@ -112,6 +116,7 @@ function WelcomePage() {
               className="absolute w-[48px] h-[45px] bottom-[130px] left-[100px] transform rotate-[-30deg] z-5 rounded-2xl"
             />
             <img
+              onClick={handleGenerateVideo}
               src={GenerateVideo}
               alt="Generate"
               className="cursor-pointer w-full px-16 pt-4"
