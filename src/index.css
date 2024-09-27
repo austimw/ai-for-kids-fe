@@ -9,4 +9,10 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
+  @font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('src/assets/fonts/MontserratAlternates-Medium.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  } 

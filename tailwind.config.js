@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'summary-notes': ['"Summary Notes"', 'sans-serif'],
+        'montserrat-alternates': ['"Montserrat Alternates"', 'sans-serif'],
       },
       backgroundImage: {
         'gif-background': "url('/src/assets/video/spinner_final.gif')", // Replace with your GIF path
