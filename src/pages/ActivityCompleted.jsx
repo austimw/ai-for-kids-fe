@@ -1,42 +1,62 @@
-export default function ActivityCompleted() {
-  return (
-    <div className="h-full w-full bg-white flex flex-col">
+import { useNavigate } from 'react-router-dom';
 
+export default function ActivityCompleted() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="h-full w-full bg-white flex flex-col relative">
       {/* Content */}
-      <div className="flex-grow flex flex-col items-center justify-center px-8 pt-12 pb-24 relative">
+      <div className="flex-grow flex flex-col items-center justify-center px-8 pt-12 pb-24 relative max-h-[673px]">
         {/* Completion banner */}
-        <img src="src/assets/general/activity-completed.png" alt="" className="absolute top-[142px]"/>
+        <img
+          src="src/assets/general/completed.png"
+          alt=""
+          className="absolute top-[47.44px]"
+        />
 
         {/* Reward section */}
-        <div className="w-[266px] h-[235px] top-[275px] gap-0 rounded-[30px] bg-[#FFF5D1] flex flex-col justify-center mt-[120px]">
-        <h2 className="text-[32px] font-normal leading-[38.4px] tracking-[0.02em] text-center mt-14 mb-3 flex justify-center">Good job, Reeve!</h2>
-          <p className="text-orange-500 font-montserrat-alternates text-[16px] font-medium leading-[19.5px] text-center mb-2">Reward</p>
-          <div className="flex items-center justify-center">
-            <img src="src/assets/general/star.svg" alt="" />
-            <span className="text-2xl font-bold text-gray-800 font-montserrat-alternates ml-2">x3</span>
-          </div>
+        <div className="w-[266px] h-[339px] top-[184px] gap-0 rounded-[30px] bg-[#FFF5D1] flex flex-col justify-center mt-[72px] px-[15px]">
+          <h2 className="text-[24.67px] font-normal leading-[29.6px] tracking-[0.02em] text-center mt-[22px] mb-[10px]">
+            You have achieved a<br></br> badge!
+          </h2>
+          <img src="src/assets/general/badge-real.png" alt="" />
         </div>
 
         {/* Decorative elements */}
-        <img src='src/assets/general/popper.gif' className="w-[120.29px] h-[121px] absolute top-[425px] left-[79px] scale-[1.4]"/>
-        <img src='src/assets/general/popper.gif' className="w-[120.29px] h-[121px] absolute top-[425px] rotate-[270deg] left-[308px] scale-[1.4]"/>
+        <img
+          src="src/assets/general/popper.gif"
+          className="w-[100px] h-[100px] absolute top-[445px] left-[91px] scale-[1.4]"
+        />
+        <img
+          src="src/assets/general/popper.gif"
+          className="w-[100px] h-[100px] absolute top-[445px] rotate-[270deg] right-[91px] scale-[1.4]"
+        />
       </div>
 
       {/* Bottom section with wavy background */}
       <div className="relative flex justify-center">
         <div className="relative z-10 px-8 py-6 space-y-4 w-[414px]">
-          <button className="w-full bg-gradient-to-b from-red-400 to-red-500 text-white text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#ac3f26]">
+          <button
+            className="w-full bg-gradient-to-b from-red-400 to-red-500 text-white text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#ac3f26]"
+            onClick={() => navigate('/welcome')}
+          >
             Create new video
           </button>
-          <button className="w-full bg-white text-gray-800 text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#acb4c0] border border-gray-300">
+          <button
+            className="w-full bg-white text-gray-800 text-xl font-bold py-4 rounded-[20px] shadow-[0_8px_0_#acb4c0] border border-gray-300"
+            onClick={() => navigate('/home')}
+          >
             Go to Home
           </button>
         </div>
       </div>
 
       {/* SVG for wavy background */}
-      <img src="src/assets/general/yellow-wave.png" alt="" className="absolute bottom-[-20px] w-[500px]"/>
-      
+      <img
+        src="src/assets/general/yellow-wave.png"
+        alt=""
+        className="absolute top-[537px] w-[500px]"
+      />
     </div>
-  )
+  );
 }

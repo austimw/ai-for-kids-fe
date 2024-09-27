@@ -21,12 +21,13 @@ export default function HomePage() {
       <img
         src="src/assets/general/badge.svg"
         alt=""
-        className="absolute w-[69px] h-[62.95px] z-10 top-[23px] right-[12px]"
+        className="absolute w-[69px] h-[62.95px] z-10 top-[23px] right-[12px] cursor-pointer"
+        onClick={() => navigate("/badges")}
       />
       <img
         src="src/assets/general/white-bg.svg"
         alt=""
-        className="absolute w-[70px] h-[62.95px] top-[31px] right-[20px]"
+        className="absolute w-[70px] h-[62.95px] top-[31px] right-[20px] cursor-pointer"
       />
       <header className="mb-6 mt-20">
         <h2 className="text-xl font-semibold">Hello</h2>

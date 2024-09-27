@@ -16,6 +16,7 @@ import HomePage from "../pages/HomePage";
 import WelcomePage from "../pages/WelcomePage";
 import Activity from "../pages/Activity";
 import ActivityCompleted from "../pages/ActivityCompleted";
+import BadgesPage from "../pages/Badges";
 
 
 export const router = createBrowserRouter(
@@ -31,6 +32,7 @@ export const router = createBrowserRouter(
       <Route path="video-loading" element={<LoadingVideo />} />
       <Route path="activity" element={<Activity />} />
       <Route path="activity-completed" element={<ActivityCompleted />} />
+      <Route path="badges" element={<BadgesPage />} />
     </Route>
   )
 );
