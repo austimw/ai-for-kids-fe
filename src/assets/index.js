@@ -22,6 +22,14 @@ import MakingFriends from "./plot/MakingFriends.svg";
 import SavingTheDay from "./plot/SavingTheDay.svg";
 import SolvingMystery from "./plot/SolvingMystery.svg";
 import Cross from "./common/Close.svg";
+import WelcomeBg from "./common/WelcomeBg.svg";
+import Bgyellow from "./common/BgYellow.svg";
+import WelcomeGreetingOne from "./common/WelcomeGreetingOne.svg";
+import WelcomeBack from "./common/WelcomeBack.svg";
+import SpeakerYellow from "./common/SpeakerYellow.svg";
+import WelcomeNext from "./common/WelcomeNext.svg";
+import WelcomeFlowers from "./common/WelcomeFlowers.svg";
+import HelpMeIdea from "./common/HelpMeIdea.svg";
 
 export {
   Family,
@@ -46,4 +54,12 @@ export {
   SavingTheDay,
   SolvingMystery,
   Cross,
+  WelcomeBg,
+  Bgyellow,
+  WelcomeGreetingOne,
+  WelcomeBack,
+  SpeakerYellow,
+  WelcomeNext,
+  WelcomeFlowers,
+  HelpMeIdea,
 };

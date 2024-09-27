@@ -54,11 +54,18 @@ const plot = [
   { name: "Solving mystery", image: SolvingMystery },
 ];
 
-const StoryCreator = () => {
+const StoryCreator = ({ handleClose, className }) => {
   return (
-    <div className="flex h-[80%] flex-col bg-white rounded-lg p-5">
+    <div
+      className={`flex h-[90%] w-[470px] flex-col bg-white rounded-lg p-5 mx-4 ${className}`}
+    >
       <div className="text-black flex justify-end">
-        <img src={Cross} alt="Close" className="w-10 h-10 cursor-pointer" />
+        <img
+          src={Cross}
+          alt="Close"
+          className="w-10 h-10 cursor-pointer"
+          onClick={handleClose}
+        />
       </div>
       <div className="flex flex-col gap-6 overflow-y-auto no-scrollbar">
         <Slider
