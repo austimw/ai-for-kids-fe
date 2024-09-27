@@ -1,0 +1,49 @@
+import Family from "./characters/Family.svg";
+import Friends from "./characters/Friends.svg";
+import Princess from "./characters/Princess.svg";
+import Mermaid from "./characters/Mermaid.svg";
+import Superheros from "./characters/Superheros.svg";
+import TalkingAnimals from "./characters/TalkingAnimals.svg";
+import Unicorns from "./characters/Unicorns.svg";
+
+import AtHome from "./setting/AtHome.svg";
+import AtSchool from "./setting/AtSchool.svg";
+import InCity from "./setting/InCity.svg";
+import WithFriends from "./setting/WithFriends.svg";
+import MysticForest from "./setting/MysticForest.svg";
+import OnShip from "./setting/OnShip.svg";
+import OuterSpace from "./setting/OuterSpace.svg";
+
+import DefeatVillian from "./plot/DefeatVillian.svg";
+import DiscoverSomething from "./plot/DiscoverSomething.svg";
+import Journey from "./plot/Journey.svg";
+import LearningLesson from "./plot/LearningLesson.svg";
+import MakingFriends from "./plot/MakingFriends.svg";
+import SavingTheDay from "./plot/SavingTheDay.svg";
+import SolvingMystery from "./plot/SolvingMystery.svg";
+import Cross from "./common/Close.svg";
+
+export {
+  Family,
+  Friends,
+  Princess,
+  Mermaid,
+  Superheros,
+  TalkingAnimals,
+  Unicorns,
+  AtHome,
+  AtSchool,
+  InCity,
+  WithFriends,
+  MysticForest,
+  OnShip,
+  OuterSpace,
+  DefeatVillian,
+  DiscoverSomething,
+  Journey,
+  LearningLesson,
+  MakingFriends,
+  SavingTheDay,
+  SolvingMystery,
+  Cross,
+};

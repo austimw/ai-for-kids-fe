@@ -10,6 +10,7 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import WelcomePage from "../pages/WelcomePage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ export const router = createBrowserRouter(
       <Route path="category-page" element={<CategoryPage />} />
       <Route path="color-guessing-game" element={<ColorGuessingGame />} />
       <Route path="walkthrough" element={<WalkthroughPage />} />
+      <Route path="welcome" element={<WelcomePage />} />
     </Route>
   )
 );
