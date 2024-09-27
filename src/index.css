@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Summary Notes';
+    src: url('src/assets/fonts/Summary Notes DEMO.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
