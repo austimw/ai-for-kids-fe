@@ -1,36 +1,20 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import {
-  WelcomeBg,
-  Bgyellow,
-  WelcomeGreetingOne,
-  SpeakerYellow,
-  WelcomeBack,
-  WelcomeNext,
-  WelcomeFlowers,
-  HelpMeIdea,
-} from "../assets";
+import { useNavigate } from "react-router-dom";
+import { Bgyellow } from "../assets";
 import ButtonIcon from "../assets/activity/button.svg";
 import SharingImage from "../assets/activity/sharing.svg";
 import OwlIcon from "../assets/video/owl-icon.svg";
 import Comment from "../assets/activity/comment.svg";
 
 function WelcomePage() {
-  const [openHelpModal, setOpenHelpModal] = useState(false);
+  const navigate = useNavigate();
 
-  const handleOpenHelpModal = () => {
-    setOpenHelpModal(true);
-  };
-
-  const handleClose = () => {
-    setOpenHelpModal(false);
+  const handleActivityComplete = () => {
+    navigate("/game");
   };
 
   return (
     <div className="relative w-full">
-      <div
-        className="bg-cover bg-center h-full w-full align-middle bg-[#FFFBE9]"
-      >
+      <div className="bg-cover bg-center h-full w-full align-middle bg-[#FFFBE9]">
         <div className="h-full w-full flex items-center relative">
           <img src={Bgyellow} alt="yellow" className="w-full h-full" />
           <div className="absolute top-0 left-0 w-full flex justify-between pb-16 pt-10 px-8">
@@ -44,8 +28,11 @@ function WelcomePage() {
             </div>
           </div>
           <div className="absolute bottom-0 w-full flex justify-center items-center flex-col pb-12">
-            <img src={SharingImage} className="px-auto py-4" />
-            <img src={ButtonIcon} />
+            <img
+              src={SharingImage}
+              className="px-auto py-4 cursor-pointer"
+            />
+            <img src={ButtonIcon} onClick={handleActivityComplete} />
             <button className="text-gray-400 mt-10 text-xl font-summary-notes">
               Skip & Go to Home
             </button>

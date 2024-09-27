@@ -40,7 +40,7 @@ export default function WalkthroughPage() {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      navigate("/home");
+      navigate("/login");
     }
   };
 
