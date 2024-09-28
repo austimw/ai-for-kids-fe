@@ -15,9 +15,7 @@ const VideoPlayer = () => {
   const { id } = useParams();
   const { data, loading, error, fetchData } = useFetch();
   const [isMuted, setIsMuted] = useState(false);
-  const [videoUrl, setVideoUrl] = useState(
-    "https://100units-multi-media-assets.s3.ap-south-1.amazonaws.com/output/final_output_video_841aaada-52b9-49e9-8ee9-63677016e049.mp4"
-  );
+  const [videoUrl, setVideoUrl] = useState("");
   const handleMute = () => {
     setIsMuted(!isMuted);
   };
@@ -37,38 +35,28 @@ const VideoPlayer = () => {
   }
 
   return (
-    <div className="bg-[#3c3c28] text-white py-10 px-10 flex flex-col">
+    <div className="bg-[#FFF4CC] text-white py-10 px-10 flex flex-col">
       <div className="flex justify-between mb-4">
-        <button className="bg-red-500 p-2 rounded-lg">
+        {/* <button className="bg-red-500 p-2 rounded-lg">
           <X size={24} />
-        </button>
+        </button> */}
         <div className="flex space-x-4">
-          <button className="bg-yellow-500 p-2 rounded-lg">
-            <img src={Reload} className="w-6 h-6" />
-            {/* <RefreshCw size={24} /> */}
-          </button>
           {/* <button className="bg-yellow-500 p-2 rounded-lg">
-            <Volume2 size={24} />
+            <img src={Reload} className="w-6 h-6" />
           </button> */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleMute}
-          >
-            {isMuted ? (
-              <img src={Mute} className="w-10 h-10" />
-            ) : (
-              <img src={Volume} className="w-10 h-10" />
-            )}
-          </motion.button>
+          {isMuted ? (
+            <img src={Mute} className="w-10 h-10" id="mute-button" />
+          ) : (
+            <img src={Volume} className="w-10 h-10" id="mute-button" />
+          )}
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold font-summary-notes text-yellow-300 my-4 mb-10">
-        Video name
+      <h1 className="text-4xl font-bold font-summary-notes text-[#1D1D1D] my-4 mb-10">
+        {data?.story_name}
       </h1>
 
-      <div className="relative w-full aspect-video bg-gradient-to-r from-green-400 to-yellow-300 rounded-lg overflow-hidden mb-4">
+      <div className="relative w-[450px] h-[430px] aspect-video bg-gradient-to-r from-green-400 to-yellow-300 rounded-lg overflow-hidden mb-4">
         <ReactPlayer
           url={videoUrl}
           width="100%"
@@ -78,7 +66,7 @@ const VideoPlayer = () => {
         />
       </div>
 
-      <p className="text-xl text-center mb-6 font-summary-notes w-[80%] mx-auto mt-10">
+      <p className="text-xl text-[#2B2B2B] text-center mb-6 font-summary-notes w-[80%] mx-auto mt-10">
         After watching the video, ask your child to complete the activity and
         get back to you once it's done. This will improve their experience.
       </p>
@@ -92,7 +80,7 @@ const VideoPlayer = () => {
         Start Activity
       </button> */}
 
-      <button className="text-gray-400 mt-10 text-xl font-summary-notes">
+      <button className="text-[#828282] mt-10 text-xl font-summary-notes">
         Save & Go to Home
       </button>
     </div>

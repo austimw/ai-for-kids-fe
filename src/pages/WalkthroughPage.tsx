@@ -59,7 +59,7 @@ export default function WalkthroughPage() {
             className="w-[44px] h-[44px]"
             id="mute-button"
           />
-          <img src={SkipButton} className="w-[81px] h-[44px]" />
+          <img src={SkipButton} className="w-[81px] h-[44px] cursor-pointer" onClick={() => navigate('/home')} />
         </div>
         <h2 className="text-[30px] font-normal text-center pt-6">
           {steps[currentStep]?.title}
