@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate, useParams } from "react-router-dom";
-import { X } from "lucide-react";
 import Button from "../assets/video/button.svg";
-import Reload from "../assets/video/reload.svg";
 import Volume from "../assets/video/volume.svg";
 import Mute from "../assets/video/mute.svg";
 import { FloatingEgg } from "../assets";
@@ -13,9 +10,10 @@ import useFetch from "../hooks/useFetch";
 const VideoPlayer = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { data, loading, error, fetchData } = useFetch();
+  const { data, loading, fetchData } = useFetch();
   const [isMuted, setIsMuted] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
+
   const handleMute = () => {
     setIsMuted(!isMuted);
   };
