@@ -64,14 +64,14 @@ export default function WalkthroughPage() {
         <h2 className="text-[30px] font-normal text-center pt-6">
           {steps[currentStep]?.title}
         </h2>
-        <p className="text-xl font-normal text-center text-[#6F6F6F] mb-6 max-w-[330px]">
+        <p className="text-xl font-normal text-center text-[#6F6F6F] mb-6 max-w-[350px]">
           {steps[currentStep]?.description}
         </p>
       </div>
       <div className="p-6">
         <div className="mb-32 image-div transition-all duration-500 ease-in-out">
           {currentStep === 0 && (
-            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-10 transition-opacity duration-500 ease-in-out">
               <img
                 src={StoryIdea}
                 className="w-[200px] h-[200px] object-cover"
@@ -79,7 +79,7 @@ export default function WalkthroughPage() {
             </div>
           )}
           {currentStep === 1 && (
-            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-10 transition-opacity duration-500 ease-in-out">
               <img
                 src={MoralIdea}
                 className="w-[200px] h-[200px] object-cover"
@@ -87,7 +87,7 @@ export default function WalkthroughPage() {
             </div>
           )}
           {currentStep === 2 && (
-            <div className="w-full h-48 flex justify-center mb-12 transition-opacity duration-500 ease-in-out">
+            <div className="w-full h-48 flex justify-center mb-10 transition-opacity duration-500 ease-in-out">
               <img
                 src={ActivityIdea}
                 className="w-[200px] h-[200px] object-cover"

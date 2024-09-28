@@ -49,6 +49,12 @@ const LoadingScreen = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (data && data.master_video_url) {
+      navigate(`/video/${videoId}`);
+    }
+  }, [data]);
+
   const texts = [
     "By involving kids in the story creation process, they become active participants.",
     "This fosters a love for reading and storytelling.",
@@ -59,7 +65,11 @@ const LoadingScreen = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 1
+        prevProgress >= 100
+          ? 0
+          : prevProgress <= 80
+          ? prevProgress + 1
+          : prevProgress
       );
     }, 100);
 
@@ -72,12 +82,6 @@ const LoadingScreen = () => {
       clearInterval(timer);
       clearInterval(textAndFlowerTimer);
     };
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      navigate("/video");
-    }, 5000);
   }, []);
 
   return (

@@ -28,7 +28,7 @@ export const router = createBrowserRouter(
       <Route path="welcome" element={<WelcomePage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="home" element={<HomePage />} />
-      <Route path="video" element={<ShowVideo />} />
+      <Route path="video/:id" element={<ShowVideo />} />
       <Route path="video-loading" element={<LoadingVideo />} />
       <Route path="activity" element={<Activity />} />
       <Route path="activity-completed" element={<ActivityCompleted />} />

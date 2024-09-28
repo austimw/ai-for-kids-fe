@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { X } from "lucide-react";
 import Button from "../assets/video/button.svg";
 import Reload from "../assets/video/reload.svg";
 import Volume from "../assets/video/volume.svg";
 import Mute from "../assets/video/mute.svg";
+import { FloatingEgg } from "../assets";
+import useFetch from "../hooks/useFetch";
 
 const VideoPlayer = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const { data, loading, error, fetchData } = useFetch();
   const [isMuted, setIsMuted] = useState(false);
   const [videoUrl, setVideoUrl] = useState(
     "https://100units-multi-media-assets.s3.ap-south-1.amazonaws.com/output/final_output_video_841aaada-52b9-49e9-8ee9-63677016e049.mp4"
@@ -17,6 +21,20 @@ const VideoPlayer = () => {
   const handleMute = () => {
     setIsMuted(!isMuted);
   };
+
+  useEffect(() => {
+    fetchData(`/stories/${id}`);
+  }, []);
+
+  useEffect(() => {
+    if (data && data.master_video_url) {
+      setVideoUrl(data.master_video_url);
+    }
+  }, [data]);
+
+  if (loading) {
+    return <img src={FloatingEgg} alt="Loading" />;
+  }
 
   return (
     <div className="bg-[#3c3c28] text-white py-10 px-10 flex flex-col">

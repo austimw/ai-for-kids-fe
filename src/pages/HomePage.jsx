@@ -43,7 +43,10 @@ export default function HomePage() {
       </header>
 
       <div className="space-y-4 flex-grow text-white max-h-[519px]">
-        <div className="bg-purple-300 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]">
+        <div
+          className="cursor-pointer bg-purple-300 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]"
+          onClick={() => navigate(`/video/${27}`)}
+        >
           <div className="z-10">
             <button className="bg-red rounded-full py-2 mb-4 mt-2">
               <img
@@ -63,7 +66,10 @@ export default function HomePage() {
           {/* <img src="src/assets/general/sample-video.png" className="absolute w-[20.74px] h-[135.45px] absolute transform rotate-[37.89deg]"/> */}
         </div>
 
-        <div className="bg-gradient-to-r from-pink-400 to-red-400 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]">
+        <div
+          className="cursor-pointer bg-gradient-to-r from-pink-400 to-red-400 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]"
+          onClick={() => navigate(`/video/${26}`)}
+        >
           <div className="z-10">
             <button className="bg-red rounded-full py-2 mb-4 mt-2">
               <img

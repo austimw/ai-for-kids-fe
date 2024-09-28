@@ -28,15 +28,15 @@ export function LandingPage() {
       <img
         src={LandingBg}
         alt="Landing Page"
-        className="w-full absolute top-0 h-full object-cover"
+        className="w-full absolute top-0 h-[730px] object-cover"
       />
       <img
         src={LandingIcon}
         alt="Landing Icon"
-        className="w-[230px] h-[230px] z-20 mt-80"
+        className="w-[230px] h-[230px] z-20 mt-[240px]"
       />
-      <div className="text-[100px] font-normal z-20">Whims.ai</div>
-      <div className="flex absolute bottom-10 gap-8">
+      <div className="text-[90px] font-normal z-20">Joy Journey</div>
+      <div className="flex absolute bottom-16 gap-8">
         <img src={Egg1} alt="Egg 1" className="w-[24px] h-[31px]" />
         <img src={Egg2} alt="Egg 2" className="w-[24px] h-[31px]" />
         <img src={Egg3} alt="Egg 3" className="w-[24px] h-[31px]" />

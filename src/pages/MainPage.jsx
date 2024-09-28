@@ -42,7 +42,7 @@ export const MainPage = () => {
   };
 
   return (
-    <div className="h-[90%] w-[500px] flex justify-center rounded-lg overflow-hidden">
+    <div className="h-[90%] w-[500px] flex justify-center rounded-3xl overflow-hidden">
       <audio ref={audioRef} loop onClick={toggleMute}>
         <source src={Item} type="audio/mp4" />
       </audio>
