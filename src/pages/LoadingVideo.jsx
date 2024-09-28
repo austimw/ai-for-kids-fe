@@ -86,7 +86,7 @@ const LoadingScreen = () => {
   }, []);
 
   const handleNavigateBack = () => {
-    navigate(-1);
+    navigate('/home');
   };
 
   return (

@@ -62,9 +62,13 @@ export default function HomePage() {
               </div>
               <img
                 src={story?.image_assets?.[0]}
-                alt="Isometric city"
                 className="h-full w-[500px] object-cover absolute top-0 right-0"
               />
+              <div className=" absolute w-full h-full flex items-start justify-center mt-16">
+                {!story?.image_assets?.[0] && (
+                  <div>Generation in progress....</div>
+                )}
+              </div>
             </div>
           ))}
       </div>
