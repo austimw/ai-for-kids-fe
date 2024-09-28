@@ -25,7 +25,7 @@ export default function LoginPage() {
           </button>
         </div>
         <h1 className="text-[100px] font-bold text-center mb-4 mt-[-28px] h-[106px]">
-          Joy Journey
+          Joy Journeys
         </h1>
         <div className="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center">
           <img
