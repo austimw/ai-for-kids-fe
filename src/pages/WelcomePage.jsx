@@ -7,6 +7,7 @@ import {
   WelcomeBack,
   HelpMeIdea,
   GenerateVideo,
+  FloatingEgg,
 } from "../assets";
 
 import StoryCreator from "./StoryCreator";
@@ -18,7 +19,7 @@ import useFetch from "../hooks/useFetch";
 import { generatedVideoId } from "../atoms/generatedVideo";
 
 function WelcomePage() {
-  const { data, loading, error, fetchData } = useFetch({
+  const { data, loading, fetchData } = useFetch({
     method: "POST",
   });
   const navigate = useNavigate();
@@ -58,14 +59,20 @@ function WelcomePage() {
       selectedItem.Morals
     ) {
       setStoryInput(
-        `Story about a ${selectedItem.Characters} in a ${selectedItem.Setting} in the ${selectedItem.Morals}`
+        `A story about a ${selectedItem.Characters} in ${selectedItem.Setting} to learn the ${selectedItem.Morals} lesson.`
       );
     }
   }, [selectedItem]);
 
   const handleGenerateVideo = () => {
     fetchData("/stories", { body: { prompt: storyInput } });
+    setSelectedItem({});
+    setStoryInput("");
   };
+
+  if (loading) {
+    return <img src={FloatingEgg} alt="Loading" />;
+  }
 
   return (
     <div className="relative w-[500px]">

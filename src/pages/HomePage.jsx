@@ -1,11 +1,10 @@
-import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
 import { FloatingEgg } from "../assets";
 
 export default function HomePage() {
-  const { data, loading, error, fetchData } = useFetch();
+  const { data, loading, fetchData } = useFetch();
 
   useEffect(() => {
     fetchData("/stories");
@@ -43,54 +42,31 @@ export default function HomePage() {
       </header>
 
       <div className="space-y-4 flex-grow text-white max-h-[519px]">
-        <div
-          className="cursor-pointer bg-purple-300 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]"
-          onClick={() => navigate(`/video/${27}`)}
-        >
-          <div className="z-10">
-            <button className="bg-red rounded-full py-2 mb-4 mt-2">
+        {data &&
+          data.map((story) => (
+            <div
+              key={story.story_name}
+              onClick={() => navigate(`/video/${story.id}`)}
+              className="hover:scale-105 cursor-pointer active:scale-95 bg-purple-300 rounded-2xl flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]"
+            >
+              <div className="z-10 pl-4">
+                <button className="bg-red rounded-full py-2 mb-4 mt-2">
+                  <img
+                    src="src/assets/general/play-button.svg"
+                    className="w-8 h-8"
+                  />
+                </button>
+                <h3 className="text-xl font-semibold mt-6">
+                  {story.story_name}
+                </h3>
+              </div>
               <img
-                src="src/assets/general/play-button.svg"
-                className="w-8 h-8"
+                src={story?.image_assets?.[0]}
+                alt="Isometric city"
+                className="h-full w-[500px] object-cover absolute top-0 right-0"
               />
-            </button>
-            <h3 className="text-xl font-semibold mt-6">Kota Matematika</h3>
-          </div>
-          <div className="transform scale-150 translate-x-[-25%] translate-y-[-25%] absolute bottom-0 right-0 w-32 h-32">
-            <img
-              src="src/assets/general/g10.png"
-              alt="Isometric city"
-              className="object-cover absolute bottom-0"
-            />
-          </div>
-          {/* <img src="src/assets/general/sample-video.png" className="absolute w-[20.74px] h-[135.45px] absolute transform rotate-[37.89deg]"/> */}
-        </div>
-
-        <div
-          className="cursor-pointer bg-gradient-to-r from-pink-400 to-red-400 rounded-2xl px-4 flex relative overflow-hidden h-[158px] shadow-[0_5px_0_#dc9b23]"
-          onClick={() => navigate(`/video/${26}`)}
-        >
-          <div className="z-10">
-            <button className="bg-red rounded-full py-2 mb-4 mt-2">
-              <img
-                src="src/assets/general/play-button.svg"
-                className="w-8 h-8"
-              />
-            </button>
-            <h3 className="text-xl font-semibold mt-6">Kota Olahraga</h3>
-            <div className="flex items-center">
-              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-              <span className="text-sm">Activity Completed</span>
             </div>
-          </div>
-          <div className="transform scale-150 translate-x-[-25%] translate-y-[-25%] absolute bottom-0 right-0 w-32 h-32">
-            <img
-              src="src/assets/general/g10.png"
-              alt="Isometric city"
-              className="object-cover absolute bottom-0"
-            />
-          </div>
-        </div>
+          ))}
       </div>
 
       <div className="flex justify-center w-full">
