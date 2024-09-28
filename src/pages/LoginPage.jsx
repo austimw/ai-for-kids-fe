@@ -1,4 +1,3 @@
-import { ArrowLeft, Volume2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
@@ -11,7 +10,11 @@ export default function LoginPage() {
   return (
     <div className="w-full h-full bg-[#e8f3ff] flex flex-col relative">
       {/* Top section */}
-      <img src="src/assets/general/login-page-yellow-bg.png" alt="" className='absolute w-[501px] top-[-90px] left-0'/>
+      <img
+        src="src/assets/general/login-page-yellow-bg.png"
+        alt=""
+        className="absolute w-[501px] top-[-90px] left-0"
+      />
       <div className="rounded-b-[50px] pb-16 pt-4 px-4 relative">
         <div className="flex justify-between mb-1">
           <button className="bg-yellow-400 p-2 rounded-full">
@@ -21,7 +24,9 @@ export default function LoginPage() {
             <img src="src/assets/general/sound-button.svg" alt="" />
           </button>
         </div>
-        <h1 className="text-[100px] font-bold text-center mb-4 mt-[-28px] h-[106px]">Joy Journey</h1>
+        <h1 className="text-[100px] font-bold text-center mb-4 mt-[-28px] h-[106px]">
+          Joy Journey
+        </h1>
         <div className="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center">
           <img
             src="src/assets/general/owl.svg"
@@ -60,7 +65,10 @@ export default function LoginPage() {
         </p>
 
         <div className="flex justify-center font-summary-notes">
-          <button onClick={handleClick} className="hover:scale-105 active:scale-95 w-[203px] bg-red-500 text-white py-3 rounded-xl text-xl font-normal mb-4 shadow-[4px_4px_#b9523b]">
+          <button
+            onClick={handleClick}
+            className="hover:scale-105 active:scale-95 w-[203px] bg-red-500 text-white py-3 rounded-xl text-xl font-normal mb-4 shadow-[4px_4px_#b9523b]"
+          >
             Continue
           </button>
         </div>

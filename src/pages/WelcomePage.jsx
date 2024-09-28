@@ -59,13 +59,15 @@ function WelcomePage() {
       selectedItem.Morals
     ) {
       setStoryInput(
-        `A story about a ${selectedItem.Characters} in a ${selectedItem.Setting} with the ${selectedItem.Morals} lesson.`
+        `A story about a ${selectedItem.Characters} in ${selectedItem.Setting} to learn the ${selectedItem.Morals} lesson.`
       );
     }
   }, [selectedItem]);
 
   const handleGenerateVideo = () => {
     fetchData("/stories", { body: { prompt: storyInput } });
+    setSelectedItem({});
+    setStoryInput("");
   };
 
   if (loading) {

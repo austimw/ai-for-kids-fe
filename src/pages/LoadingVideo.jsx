@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { generatedVideoId } from "../atoms/generatedVideo";
 import { useRecoilState } from "recoil";
+import { WelcomeBack } from "../assets";
 
 const owlVariants = {
   jump: {
@@ -84,8 +85,18 @@ const LoadingScreen = () => {
     };
   }, []);
 
+  const handleNavigateBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="bg-gif-background w-[500px] bg-cover bg-center bg-yellow-300 flex flex-col items-center py-24 px-10">
+      <img
+        src={WelcomeBack}
+        alt="Back"
+        className="cursor-pointer absolute top-[80px] left-[700px]"
+        onClick={handleNavigateBack}
+      />
       <div className="flex items-start w-full mt-14">
         <motion.img
           src={OwlIcon}

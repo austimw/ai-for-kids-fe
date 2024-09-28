@@ -9,13 +9,6 @@ import {
   AtSchool,
   InCity,
   MysticForest,
-  DefeatVillian,
-  DiscoverSomething,
-  Journey,
-  LearningLesson,
-  MakingFriends,
-  SavingTheDay,
-  SolvingMystery,
   Cross,
   Done,
 } from "../assets";
@@ -31,9 +24,9 @@ const characters = [
 ];
 
 const setting = [
-  { name: "At Home", image: AtHome },
-  { name: "At School", image: AtSchool },
-  { name: "In a city", image: InCity },
+  { name: "Home", image: AtHome },
+  { name: "School", image: AtSchool },
+  { name: "City", image: InCity },
   { name: "Mystic Forest", image: MysticForest },
 ];
 
