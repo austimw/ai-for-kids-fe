@@ -11,7 +11,7 @@ export default function LoginPage() {
   return (
     <div className="w-full h-full bg-[#e8f3ff] flex flex-col relative">
       {/* Top section */}
-      <img src="src/assets/general/login-page-yellow-bg.png" alt="" className='absolute w-[501px] top-[-90px] left-0'/>
+      <img src="src/assets/general/login-page-yellow-bg.png" alt="" className='absolute w-[501px] top-[-90px] left-0 pointer-events-none'/>
       <div className="rounded-b-[50px] pb-16 pt-4 px-4 relative">
         <div className="flex justify-between mb-1">
           <button className="bg-yellow-400 p-2 rounded-full">
